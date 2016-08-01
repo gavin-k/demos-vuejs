@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>demo02</title>
+</head>
+<body>
+
+	<h2>v-for demo</h2>
+	<div id="todos">
+		<input type="text" v-model='info' v-on:keyup.enter='addTodo'>
+		<ul>
+			<li v-for="todo in todos">
+				<span>{{ todo.text }}</span>
+				<button v-on:click='removeTodo($index)'>X</button>
+			</li>
+		</ul>
+	</div>
+	<br>
+
+	<h2>v-pre demo</h2>
+	<span v-pre>{{ this will not be compiled }}</span>
+
+	<h2>v-if demo</h2>
+	<div id="if">
+		<div v-if="Math.random() > 0.5">
+	        true
+		</div>
+		<div v-else>
+		    false
+		</div>
+	</div>
+	<script type="text/javascript" src="bundle.js"></script>
+</body>
+</html>

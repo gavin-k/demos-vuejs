@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Demo03</title>
+</head>
+<body>
+
+	<h2>part1</h2>
+	<div id="part1">
+		<my-component></my-component>
+	</div>
+
+	<h2>part2</h2>
+	<div id="part2">
+		<globals msg="给 props 的信息!"></globals>
+	</div>
+
+	<h2>part3</h2>
+	<div id="part3">
+		<input v-model="parentMsg" />
+		<br>
+		<!-- v-bind 表示将 my-message 的值与表达式 parentMsg 绑定 -->
+		<children v-bind:my-message="parentMsg"></children>
+		<!-- v-on 表示 监听 DOM 事件. -->
+	</div>
+
+
+	<script type="text/javascript" src="bundle.js"></script>
+</body>
+</html>

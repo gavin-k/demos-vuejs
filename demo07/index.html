@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Demo07</title>
+</head>
+<body>
+	<h2>part 1</h2>
+	<span id="part1" v-text="message | reverse"></span>
+	<h2>part 2</h2>
+	<span id="part2" v-text="message | wrap 'before' 'after' "></span>
+	<h2>part 3</h2>
+	<div id="part3">
+		<input type="text" v-model="coins | currencyDisplay" name="">
+		<p>Model value: {{ coins }}</p>
+		<pre>{{ $data | json }}</pre>
+	</div>
+	<script type="text/javascript" src="bundle.js"></script>
+</body>
+</html>

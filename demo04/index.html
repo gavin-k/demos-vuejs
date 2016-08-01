@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Demo04</title>
+</head>
+<body>
+	<div id="ajax">
+		<p>{{message}}, {{code}}</p>
+		<div v-html="<h1>Hello World</h1>"></div>
+		<div>{{{html}}}</div>
+		<div v-for="(index,row) in lists">
+			<p><a v-bind:href="row">{{index}}</a></p>
+		</div>
+	</div>
+	<script type="text/javascript" src="bundle.js"></script>
+</body>
+</html>
