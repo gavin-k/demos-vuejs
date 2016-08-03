@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Demo08</title>
+</head>
+<body>
+	<!-- 子组件模板 -->
+	<template id="child-template">
+		<input type="text" v-model="msg">
+		<button v-on:click="notify">Dispatch Event</button>
+	</template>
+
+	<!-- 父组件模板 -->
+	<div id="events-example">
+		<p>Messages: {{ messages | json }}</p>
+		<!-- 监听 child-msg 事件 -->
+		<!-- <child v-on:child-msg="handleIt"></child> 此例子 表示监听 child-msg 事件,然后调用 handleIt 方法 -->
+		<child></child>
+	</div>
+	<script type="text/javascript" src="bundle.js"></script>
+</body>
+</html>

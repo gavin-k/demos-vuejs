@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Demo 09</title>
+	<style>
+		.fade-transition {
+			transition: opacity .3s ease;
+		}
+		.fade-enter, .fade-leave {
+			opacity: 0;
+		}
+	</style>
+</head>
+<body>
+	<h3>动态组件</h3>
+	<div id="dynamic-comp">
+		<!-- keep-alive: 如果把切换出去的组件保留在内存中,可以保留它的状态或避免重新渲染.为此可以添加一个 keep-alive 参数. 切换的时候 会初始化一次.然后保存在内存中 -->
+		<!-- transition 中的参数, 需与 style 中的 样式相对应. -->
+		<!-- transition-mode 有两个参数: out-in , in-out -->
+		<component :is="curView" keep-alive transition="fade" transition-mode="out-in"></component>
+		<br>
+		<button v-on:click="viewCh">change View</button>
+	</div>
+	<script type="text/javascript" src="bundle.js"></script>
+</body>
+</html>
